@@ -43,6 +43,13 @@
 							<anypoint.platform.client_id>${anypoint.platform.api.client-id}</anypoint.platform.client_id>
 							<anypoint.platform.client_secret>${anypoint.platform.api.client-id}</anypoint.platform.client_secret>
 						</properties>
+						<deploymentSettings>
+							<http>
+								<inbound>
+									<publicUrl>${cloudhub2.application.public-url}</publicUrl>
+								</inbound>
+							</http>
+						</deploymentSettings>
 						<connectedAppClientId>${anypoint.platform.connected-app.client-id}</connectedAppClientId>
 						<connectedAppClientSecret>${anypoint.platform.connected-app.client-secret}</connectedAppClientSecret>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
