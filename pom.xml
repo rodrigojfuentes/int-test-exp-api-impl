@@ -48,7 +48,7 @@
 						<deploymentSettings>
 							<http>
 								<inbound>
-									<publicUrl>${cloudhub2.application.public-url}</publicUrl>
+									<publicUrl>${cloudhub2.application.default-public-url}</publicUrl>
 								</inbound>
 							</http>
 						</deploymentSettings>
