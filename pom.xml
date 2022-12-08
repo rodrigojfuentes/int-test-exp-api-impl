@@ -51,8 +51,8 @@
 									<publicUrl>${cloudhub2.application.default-public-url}</publicUrl>
 								</inbound>
 							</http>
+							<generateDefaultPublicUrl>${cloudhub2.application.default-public-url}</generateDefaultPublicUrl>
 						</deploymentSettings>
-						<generateDefaultPublicUrl>${cloudhub2.application.default-public-url}</generateDefaultPublicUrl>
 						<connectedAppClientId>${anypoint.platform.connected-app.client-id}</connectedAppClientId>
 						<connectedAppClientSecret>${anypoint.platform.connected-app.client-secret}</connectedAppClientSecret>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
