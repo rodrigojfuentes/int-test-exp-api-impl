@@ -7,7 +7,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
     <apikit:config name="int-test-exp-api-config" api="resource::c4f668c6-4fc2-449b-ba9b-6e20a7dc7f82:int-test-exp-api:1.0.0:raml:zip:int-test-exp-api.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
     <api-gateway:autodiscovery apiId="18354972" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="dffe9468-c63a-4823-ad7a-8b9c8f7578e1" flowRef="int-test-exp-api-main" />
 	<flow name="int-test-exp-api-main">
-        <http:listener config-ref="int-test-exp-api-httpListenerConfig" path="/api/*">
+        <http:listener config-ref="int-test-exp-api-httpListenerConfig" path="/*">
             <http:response statusCode="#[vars.httpStatus default 200]">
                 <http:headers>#[vars.outboundHeaders default {}]</http:headers>
             </http:response>
