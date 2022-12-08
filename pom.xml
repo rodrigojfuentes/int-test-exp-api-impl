@@ -44,12 +44,12 @@
 							<anypoint.platform.client_secret>${anypoint.platform.api.client-secret}</anypoint.platform.client_secret>
 						</properties>
 						<deploymentSettings>
+							<generateDefaultPublicUrl>${cloudhub2.application.default-public-url}</generateDefaultPublicUrl>
 							<http>
 								<inbound>
-									<publicUrl>${cloudhub2.application.default-public-url}</publicUrl>
+									<publicUrl>${cloudhub2.application.public-url}</publicUrl>
 								</inbound>
 							</http>
-							<generateDefaultPublicUrl>${cloudhub2.application.default-public-url}</generateDefaultPublicUrl>
 						</deploymentSettings>
 						<connectedAppClientId>${anypoint.platform.connected-app.client-id}</connectedAppClientId>
 						<connectedAppClientSecret>${anypoint.platform.connected-app.client-secret}</connectedAppClientSecret>
