@@ -41,8 +41,10 @@
 						<businessGroupId>${anypoint.platform.business-group.id}</businessGroupId>
 						<properties>
 							<anypoint.platform.client_id>${anypoint.platform.api.client-id}</anypoint.platform.client_id>
-							<anypoint.platform.client_secret>${anypoint.platform.api.client-secret}</anypoint.platform.client_secret>
 						</properties>
+						<secureProperties>
+							<anypoint.platform.client_secret>${anypoint.platform.api.client-secret}</anypoint.platform.client_secret>
+						</secureProperties>
 						<deploymentSettings>
 							<http>
 								<inbound>
@@ -50,6 +52,7 @@
 								</inbound>
 							</http>
 						</deploymentSettings>
+						<generateDefaultPublicUrl>${cloudhub2.application.default-public-url}</generateDefaultPublicUrl>
 						<connectedAppClientId>${anypoint.platform.connected-app.client-id}</connectedAppClientId>
 						<connectedAppClientSecret>${anypoint.platform.connected-app.client-secret}</connectedAppClientSecret>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
