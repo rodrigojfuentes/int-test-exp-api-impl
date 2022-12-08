@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mycompany</groupId>
-	<artifactId>int-test-exp-api</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<groupId>c4f668c6-4fc2-449b-ba9b-6e20a7dc7f82</groupId>
+	<artifactId>int-test-exp-api-impl</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
 	<name>int-test-exp-api</name>
@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.4.0-20221111</app.runtime>
-		<mule.maven.plugin.version>3.8.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.8.2</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -29,6 +29,26 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
+					<cloudhub2Deployment>
+						<muleVersion>${cloudhub2.application.runtime}</muleVersion>
+						<applicationName>${cloudhub2.application.name}</applicationName>
+						<target>${cloudhub2.private-space.name}</target>
+						<provider>MC</provider>
+						<environment>${cloudhub2.environment}</environment>
+						<replicas>${cloudhub2.replicas.number}</replicas>
+						<vCores>${cloudhub2.replicas.size}</vCores>
+						<businessGroupId>${anypoint.platform.business-group.id}</businessGroupId>
+						<properties>
+							<anypoint.platform.client_id>${anypoint.platform.api.client-id}</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>${anypoint.platform.api.client-id}</anypoint.platform.client_secret>
+						</properties>
+						<connectedAppClientId>${anypoint.platform.connected-app.client-id}</connectedAppClientId>
+						<connectedAppClientSecret>${anypoint.platform.connected-app.client-secret}</connectedAppClientSecret>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
+					</cloudhub2Deployment>
+					<classifier>mule-application</classifier>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -87,5 +107,14 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+	
+	<distributionManagement>
+		<repository>
+			<id>Repository</id>
+			<name>Corporate Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 
 </project>
