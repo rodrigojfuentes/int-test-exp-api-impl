@@ -105,7 +105,7 @@ output application/json
 output application/json
 ---
 {
-  message: "operation succeeded"
+  message: "operation succeeded " ++ (Mule::p('mule.protected') default "not set")
 }]]></ee:set-payload>
             </ee:message>
         </ee:transform>
