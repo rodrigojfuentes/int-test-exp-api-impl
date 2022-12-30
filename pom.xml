@@ -43,9 +43,6 @@
 							<anypoint.platform.client_id>${anypoint.platform.api.client-id}</anypoint.platform.client_id>
 							<anypoint.platform.client_secret>${anypoint.platform.api.client-secret}</anypoint.platform.client_secret>
 						</properties>
-						<secureProperties>
-							<mule.protected>hello</mule.protected>
-						</secureProperties>
 						<deploymentSettings>
 							<generateDefaultPublicUrl>${cloudhub2.application.default-public-url}</generateDefaultPublicUrl>
 							<http>
