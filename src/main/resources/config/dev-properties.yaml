@@ -1,5 +1,6 @@
 api:
   id: "18354972"
+  client-id: "b7d79d66748341c28b275b1417cb04ad"
 
 http:
   host: "0.0.0.0"
